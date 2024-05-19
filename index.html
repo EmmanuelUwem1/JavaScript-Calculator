@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Calculator</title>
+    <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script> -->
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div><ion-icon name="calculator" id="calculatorIcon" ></ion-icon></div>
+        <div class="timer">
+            <span class="hour" data-val="12"></span>
+            <span class="minute" data-val="60"></span>
+            <span class="second" data-val="60"></span>
+        </div>
+
+    </header>
+
+    <main>
+
+        <div id="calculator">
+
+            <div class="input"><input type="text" name="" id="input" readonly></div>
+
+            <div class="buttons">
+                <div class="row1">
+                    <button class="function" onclick="clearScreen()" id="AC">AC</button>
+                    <button class="function" onclick="Delete()">CE</button>
+                    <button onclick="appendtoDisplay('**')" class="operator" id="buttonExp">^</button>
+                    <button onclick="appendtoDisplay('/')" class="operator" id="buttonDiv">/</button>
+                </div>
+                <div class="row2">
+                    <button onclick="appendtoDisplay('7')" id="buttonSeven">7</button>
+                    <button onclick="appendtoDisplay('8')" id="buttonEight">8</button>
+                    <button onclick="appendtoDisplay('9')" id="buttonNine">9</button>
+                    <button onclick="appendtoDisplay('*')" class="operator" id="buttonTimes">*</button>
+                </div>
+                <div class="row3">
+                    <button onclick="appendtoDisplay('4')" id="buttonFour">4</button>
+                    <button onclick="appendtoDisplay('5')" id="buttonFive">5</button>
+                    <button onclick="appendtoDisplay('6')" id="buttonSix">6</button>
+                    <button onclick="appendtoDisplay('-')" class="operator" id="buttonMinus">-</button>
+                </div>
+                <div class="row4">
+                    <button onclick="appendtoDisplay('1')" id="buttonOne">1</button>
+                    <button onclick="appendtoDisplay('2')" id="buttonTwo">2</button>
+                    <button onclick="appendtoDisplay('3')" id="buttonThree">3</button>
+                    <button onclick="appendtoDisplay('+')" class="operator" id="buttonPlus">+</button>
+                </div>
+                <div class="row5">
+                    <button onclick="appendtoDisplay('0')" id="buttonZero">0</button>
+                    <button onclick="appendtoDisplay('.')" id="buttonDot">.</button>
+                    <button onclick="evalDisplay()" class="functionEqual">=</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="bubbles">
+            <span onclick="Blow(blow1)"></span>
+            <span onclick="Blow(blow2)"></span>
+            <span onclick="Blow(blow3)"></span>
+            <span onclick="Blow(blow4)"></span>
+            <span onclick="Blow(blow5)"></span>
+            <span onclick="Blow(blow5)"></span>
+            <span></span>
+            <span onclick="Blow(blow8)"></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="shooter"></div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+    <script src="script.js">
+       
+
+    </script>
+</body>
+
+</html>
